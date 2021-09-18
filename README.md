@@ -13,10 +13,10 @@ For more information visit https://code.visualstudio.com/api/working-with-extens
 
 # How to use this image
 
-   ` docker run --rm -v <path>: / workspace joseaeltala / vsce <argument>`
+   ` docker run --rm -v <path>:/workspace joseaeltala/vsce <argument>`
 
 - `--rm`: delete the container automatically when stopped
-- `-v <path>: / workspace`: vsce will apply the command on the path / workspace, so you must mount a volume with your extension in that directory.
+- `-v <path>:/workspace`: vsce will apply the command on the path / workspace, so you must mount a volume with your extension in that directory.
 - `<argument>`: the argument you use will be the one applied to the VSCE command.
 
 In the following command, an example is shown in which my extension created in the path vscode-markdown-draw will be packed:
