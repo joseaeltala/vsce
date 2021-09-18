@@ -1,26 +1,24 @@
-# ¿Qué es Visual Studio Code Extension Manager o VSCE?
+# What is Visual Studio Code Extension Manager or VSCE?
 
-VSCE es una herramienta para publicar extensiones en Visual Studio code. También la puedes usar para empaquetar tu extensión en un archivo .VSIX, y asi instalarla sin publicarla.
+VSCE is a tool for publishing extensions in Visual Studio code. You can also use it to package your extension in a .VSIX file, and install it without publishing it.
 
-Para más información visita https://code.visualstudio.com/api/working-with-extensions/publishing-extension
+For more information visit https://code.visualstudio.com/api/working-with-extensions/publishing-extension
 
-# Referencias
+# References
 
- - Repositorio: https://github.com/joseaeltala/vsce
- - Puedes publicar cualquier incidencia aquí: https://github.com/joseaeltala/vsce/issues
-
-
-
-# Como usar esta imagen
-
-    docker run --rm -v <path>:/workspace joseaeltala/vsce <argumento>
-- `--rm`: borra el contenedor automaticamente cuando se pare
- - `-v <path>:/workspace`: vsce aplicará el comando sobre el path /workspace, por lo que debes montar un volumen con tu extensión en ese directorio.
- - `<argumento>`: el argumento que uses, será el que se aplique al comando VSCE.
-
-En el siguiente comando, se muestra un ejemplo en el que se empaquetará mi extensión creada en el path vscode-markdown-draw:
-
-    docker run --rm -v ~/vscode-markdown-draw:/workspace joseaeltala/vsce 'package'
+ - Repository: https://github.com/joseaeltala/vsce
+ - You can post any incident here: https://github.com/joseaeltala/vsce/issues
 
 
- 
+
+# How to use this image
+
+   ` docker run --rm -v <path>: / workspace joseaeltala / vsce <argument>`
+
+- `--rm`: delete the container automatically when stopped
+- `-v <path>: / workspace`: vsce will apply the command on the path / workspace, so you must mount a volume with your extension in that directory.
+- `<argument>`: the argument you use will be the one applied to the VSCE command.
+
+In the following command, an example is shown in which my extension created in the path vscode-markdown-draw will be packed:
+
+    docker run --rm -v ~/vscode-markdown-draw:/workspace joseaeltala/vsce 'package' 
